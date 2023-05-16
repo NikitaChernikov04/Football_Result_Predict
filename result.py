@@ -3,7 +3,7 @@ import pandas as pd
 import random
 
 # Загрузка данных из CSV-файла
-data = pd.read_csv(r'C:\Users\slinm\Desktop\Football_Result_Predict\football_scores.csv')
+data = pd.read_csv(r'C:\Users\slinm\Desktop\Новая папка\Football_Result_Predict\football_scores.csv')
 
 
 # Функция для высчитывания вероятности победы, поражения, ничьи и вероятного счета для пары команд
