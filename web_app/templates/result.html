@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Predict
+{% endblock %}
+
+
+{% block body %}
+<div class="case">
+    <h2>ya eblan</h2> <br>
+
+    {% if Home_team %}
+        <p>Home team is - {{ Home_team }}</p>
+    {% endif %}
+
+    {% if Enemy_team %}
+        <p>Enemy team is - {{ Enemy_team }}</p>
+    {% endif %}
+
+    <br>
+    <br>
+
+    {% if win_probability %}
+        <p>Вероятность победы команды {{Home_team}} - {{ win_probability }}</p>
+    {% endif %}
+
+    {% if loss_probability %}
+        <p>Вероятность победы команды {{Enemy_team}} - {{ loss_probability }}</p>
+    {% endif %}
+
+    {% if draw_probability %}
+        <p>Вероятность ничьей между командами - {{ draw_probability }}</p>
+    {% endif %}
+
+    {% if home_team_expected_score %}
+        <p>Ожидаемый счет для команды {{Home_team}} - {{ home_team_expected_score }}</p>
+    {% endif %}
+
+    {% if guest_team_expected_score %}
+        <p>Ожидаемый счет для команды {{Enemy_team}} - {{ guest_team_expected_score }}</p>
+    {% endif %}
+</div>
+{% endblock %}

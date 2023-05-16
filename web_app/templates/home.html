@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Govno
+{% endblock %}
+
+
+{% block body %}
+<header class="header">
+    <h1>Ebanoe</h1>
+</header>
+<div class="page-content">
+    <h2>Рассчитайте предварительную цену автомобиля по его параметрам</h2>
+    <div class="case">
+        <form method="post">
+            <label for="Home_team" style="display: none;">Home team</label> <input type="name" name="Home_team" id="Home_team" placeholder="Домашняя команда"><br>
+            <label for="Enemy_team" style="display: none;">Enemy team</label> <input type="name" name="Enemy_team" id="Enemy_team" placeholder="Гости"><br>
+            <button type="submit">Предикт?</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
