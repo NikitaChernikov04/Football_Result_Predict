@@ -26,15 +26,26 @@
 
         @keyframes slide-down {
             0% { transform: translateY(-50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
         }
 
         .header h2 {
             margin: -25px;
             font-size: 18px;
             color: #643423;
-            animation: slide-down 1s ease-out;
+            animation: slide-up 1s ease-out ;
         }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
 
         .case {
             margin: 200px;
