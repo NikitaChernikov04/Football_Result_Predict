@@ -110,67 +110,11 @@
             background-color: #3b4d3a;
         }
 
-
-        .hamburger {
-            display: none;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: left;
-            padding-left: 40px;
-        }
-
-        .menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        .menu li {
-            margin-right: 20px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-            }
-
-            .hamburger {
-                display: block;
-                cursor: pointer;
-            }
-
-            .hamburger span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background-color: #333;
-                margin-bottom: 5px;
-            }
-        }
-
     </style>
 </head>
 <body>
 <header class="header">
     <h1>ScorePredictor</h1>
-    <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-    </div>
-    <nav class="menu">
-            <ul>
-                <li><a href="https://vk.com/chernik_7">Contact</a></li>
-            </ul>
-    </nav>
     <h2>Введите необходимую информацию</h2>
 </header>
 <div class="case">
