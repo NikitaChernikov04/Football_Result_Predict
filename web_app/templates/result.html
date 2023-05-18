@@ -39,12 +39,8 @@
             background-color: #d8c8bc;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             animation: fade-in 1s ease-out;
-            transition: transform 0.3s;
         }
 
-        .case:hover {
-            transform: scale(1.05);
-        }
 
         @keyframes fade-in {
             0% { opacity: 0; }
@@ -80,24 +76,41 @@
             margin-bottom: 20px;
         }
 
-        .case .btn {
+
+        .btn {
             display: block;
             margin-top: 20px;
             text-align: center;
+            transform: scale(1.2);
         }
 
-        .case .btn a {
-            padding: 5px 25px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
+        .btn a {
+            background-color: #760910;
+            box-shadow: 0 0 5px white, 0 0 25px white;
+            border-radius: 30px;
+            color: white;
             text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%; /* Размер иконки */
+            padding: 10px; /* Добавление отступов для иконки */
         }
 
-        .case .btn a:hover {
-            background-color: #3b4d3a;
+        .btn a:hover {
+            background-color: #760910;
+            box-shadow: 0 0 5px #ff9900, 0 0 100px #ff9900, 0 0 200px #ff9900;
+            border-radius: 30px;
+            color: #d9c4ab;
+            text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%; /* Размер иконки */
+            padding: 10px; /* Добавление отступов для иконки */
         }
+
+
     </style>
 </head>
 <body>
@@ -139,7 +152,7 @@
     {% endif %}
 
     <div class="btn">
-        <a href="http://127.0.0.1:5000/">Вернуться</a>
+        <a href="http://127.0.0.1:5000/">back</a>
     </div>
 </div>
 </body>

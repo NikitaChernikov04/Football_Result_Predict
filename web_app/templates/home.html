@@ -103,20 +103,30 @@
                         100px #ffffff;
         }
 
-
         .case button[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
+            background-color: #760910;
+            box-shadow: 0 0 5px white,
+            0 0 25px white;
+            border-radius: 30px;
+            color: white;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            transform: scale(1.2);
+            font-size: 14px;
         }
 
         .case button[type="submit"]:hover {
-            background-color: #3b4d3a;
+            background-color: #760910;
+            box-shadow: 0 0 5px #ff9900,
+            0 0 100px #ff9900,
+            0 0 200px #ff9900;
+            border-radius: 30px;
+            color: #d9c4ab;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            transform: scale(1.2);
+            font-size: 14px;
         }
+
+
 
     </style>
 </head>
@@ -129,7 +139,7 @@
     <form method="post">
         <label for="Home_team">Home team</label> <input type="name" name="Home_team" id="Home_team" placeholder="Домашняя команда"><br>
         <label for="Enemy_team">Enemy team</label> <input type="name" name="Enemy_team" id="Enemy_team" placeholder="Гостевая команда"><br>
-        <button type="submit">Показать результат</button>
+        <button type="submit">результат</button>
     </form>
 </div>
 </body>
