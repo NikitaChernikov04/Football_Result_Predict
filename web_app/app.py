@@ -5,8 +5,6 @@ from result import calculate_probability
 app = Flask(__name__)
 
 
-"""----------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------"""
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['POST'])
 def index():
@@ -33,7 +31,7 @@ def result():
 
     win_probability, loss_probability, draw_probability, home_team_expected_score, guest_team_expected_score = calculate_probability(Home_team, Enemy_team)
 
-    return render_template('result.html', Home_team=Home_team, Enemy_team=Enemy_team, win_probability=win_probability, loss_probability=loss_probability, draw_probability=draw_probability, home_team_expected_score=home_team_expected_score, guest_team_expected_score=guest_team_expected_score)
+    return render_template('result.html', Home_team=Home_team, Enemy_team=Enemy_team, win_probability=str(win_probability)[0:4:], loss_probability=str(loss_probability)[0:4:], draw_probability=str(draw_probability)[0:4:], home_team_expected_score=str(home_team_expected_score)[0:4:], guest_team_expected_score=str(guest_team_expected_score)[0:4:])
 
 
 if __name__ == "__main__":

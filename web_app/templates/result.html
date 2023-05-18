@@ -1,21 +1,106 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScorePredictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #deba9a;
+        }
 
-{% block title %}
-Predict
-{% endblock %}
+        .header {
+            background-color: #deba9a;
+            padding: 20px;
+            text-align: center;
+        }
 
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
 
-{% block body %}
+        .header h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .case {
+            margin: 150px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #d8c8bc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fade-in 1s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .case h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .case p {
+            margin: 0;
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+        }
+
+        .case p:first-child {
+            margin-top: 20px;
+        }
+
+        .case p:last-child {
+            margin-bottom: 20px;
+        }
+
+        .case .btn {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .case .btn a {
+            padding: 5px 25px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .case .btn a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1></h1>
+</header>
 <div class="case">
-    <h2>ya eblan</h2> <br>
+    <h2>Predict</h2>
 
     {% if Home_team %}
-        <p>Home team is - {{ Home_team }}</p>
+        <p>Домашняя команда - {{ Home_team }}</p>
     {% endif %}
 
     {% if Enemy_team %}
-        <p>Enemy team is - {{ Enemy_team }}</p>
+        <p>Гостевая команда - {{ Enemy_team }}</p>
     {% endif %}
 
     <br>
@@ -40,5 +125,10 @@ Predict
     {% if guest_team_expected_score %}
         <p>Ожидаемый счет для команды {{Enemy_team}} - {{ guest_team_expected_score }}</p>
     {% endif %}
+
+    <div class="btn">
+        <a href="http://127.0.0.1:5000/">Вернуться</a>
+    </div>
 </div>
-{% endblock %}
+</body>
+</html>

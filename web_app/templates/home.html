@@ -1,23 +1,105 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScorePredictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #deba9a;
+        }
 
+        .header {
+            background-color: #deba9a;
+            padding: 20px;
+            text-align: center;
+        }
 
-{% block title %}
-Govno
-{% endblock %}
+        .header h1 {
+            margin: 25px;
+            font-size: 28px;
+            animation: slide-down 1s ease-out;
+        }
 
+        @keyframes slide-down {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
 
-{% block body %}
+        .header h2 {
+            margin: -25px;
+            font-size: 18px;
+            color: #666;
+            animation: slide-down 1s ease-out;
+        }
+
+        .case {
+            margin: 200px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #d8c8bc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fade-in 2s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .case form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .case label {
+            display: none;
+        }
+
+        .case input[type="name"] {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .case input[type="name"]:hover {
+            transform: scale(1.1);
+        }
+
+        .case button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .case button[type="submit"]:hover {
+            background-color: #3b4d3a;
+        }
+    </style>
+</head>
+<body>
 <header class="header">
-    <h1>Ebanoe</h1>
+    <h1>ScorePredictor</h1>
+    <h2>Введите необходимую информацию</h2>
 </header>
-<div class="page-content">
-    <h2>Рассчитайте предварительную цену автомобиля по его параметрам</h2>
-    <div class="case">
-        <form method="post">
-            <label for="Home_team" style="display: none;">Home team</label> <input type="name" name="Home_team" id="Home_team" placeholder="Домашняя команда"><br>
-            <label for="Enemy_team" style="display: none;">Enemy team</label> <input type="name" name="Enemy_team" id="Enemy_team" placeholder="Гости"><br>
-            <button type="submit">Предикт?</button>
-        </form>
-    </div>
+<div class="case">
+    <form method="post">
+        <label for="Home_team">Home team</label> <input type="name" name="Home_team" id="Home_team" placeholder="Домашняя команда"><br>
+        <label for="Enemy_team">Enemy team</label> <input type="name" name="Enemy_team" id="Enemy_team" placeholder="Гостевая команда"><br>
+        <button type="submit">Показать результат</button>
+    </form>
 </div>
-{% endblock %}
+</body>
+</html>
